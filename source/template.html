@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang=en>
+<html lang=ko>
 <head>
 <meta charset=utf-8>
-<title>Abyssal Garden</title>
+<title>심해 정원</title>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta name=theme-color content=#03131c>
 <style>
@@ -43,7 +43,7 @@ h1 {
 p { margin: 0; }
 #a { display: grid; width: 27em; max-width: 100%; }
 #a > * { grid-area: 1/1; transition: opacity .8s, visibility .8s; }
-#s, #w, #q, #k, #h { font-size: .8em; letter-spacing: .12em; text-transform: uppercase; }
+#s, #w, #q, #k, #h { font-size: .8em; letter-spacing: .12em; text-transform: uppercase; word-break: keep-all; }
 #w { margin-top: 1.2em; color: #7ff3ff; text-wrap: balance; }
 
 /* loading bar */
@@ -122,34 +122,34 @@ svg { width: 1.5em; height: 1.5em; fill: currentColor; }
 <body class=l>
 <canvas id=c></canvas>
 <div id=m>
-  <h1>Abyssal Garden</h1>
+  <h1>심해 정원</h1>
   <div id=a>
-    <div id=l><div id=p><i id=b></i></div><p id=s>Diving…</p><p id=w hidden>Use Google Chrome for optimal experience</p></div>
+    <div id=l><div id=p><i id=b></i></div><p id=s>입수 준비 중…</p><p id=w hidden>최적의 환경을 위해 Google Chrome 사용을 권장합니다</p></div>
     <div id=g>
-      <button id=d>Dive in</button>
-      <p id=q><span>Detail</span><button>Low</button><button>Medium</button><button>High</button></p>
+      <button id=d>입수하기</button>
+      <p id=q><span>화질</span><button>낮음</button><button>보통</button><button>높음</button></p>
       <div id=k>
         <p>
-          <i><b>W</b><b>A</b><b>S</b><b>D</b></i>Swim
-          <i><b>Q</b><b>E</b></i>Down / up
-          <i><b>Shift</b></i>Faster
-          <i><b>1</b>–<b>6</b></i>Viewpoints
+          <i><b>W</b><b>A</b><b>S</b><b>D</b></i>수영
+          <i><b>Q</b><b>E</b></i>하강 / 상승
+          <i><b>Shift</b></i>가속
+          <i><b>1</b>–<b>6</b></i>시점 이동
         </p>
         <p>
-          <i><b>Esc</b></i>Menu
-          <i><b>M</b></i>Mute
-          <i><b>H</b></i>Stats
+          <i><b>Esc</b></i>메뉴
+          <i><b>M</b></i>음소거
+          <i><b>H</b></i>통계
         </p>
       </div>
-      <p id=h>Hold to swim forward · slide to steer · second finger to go faster</p>
+      <p id=h>누르고 있으면 앞으로 수영 · 밀어서 방향 전환 · 두 번째 손가락으로 가속</p>
     </div>
   </div>
   <p id=f>
     <a href=https://github.com/Noniv/abyssal-garden target=_blank><svg viewBox="0 0 16 16"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>GitHub</a>
-    <a href=https://ko-fi.com/noniv target=_blank><svg viewBox="0 0 24 24"><path fill-rule=evenodd d="M2 5h16.5a4.5 4.5 0 0 1 0 9H17a6 6 0 0 1-6 5H8a6 6 0 0 1-6-6zM17 8v3h1.5a1.5 1.5 0 0 0 0-3zM9.5 15.5 5.9 12a2.2 2.2 0 0 1 3.6-2.5 2.2 2.2 0 0 1 3.6 2.5z"/></svg>Support</a>
+    <a href=https://ko-fi.com/noniv target=_blank><svg viewBox="0 0 24 24"><path fill-rule=evenodd d="M2 5h16.5a4.5 4.5 0 0 1 0 9H17a6 6 0 0 1-6 5H8a6 6 0 0 1-6-6zM17 8v3h1.5a1.5 1.5 0 0 0 0-3zM9.5 15.5 5.9 12a2.2 2.2 0 0 1 3.6-2.5 2.2 2.2 0 0 1 3.6 2.5z"/></svg>후원</a>
   </p>
 </div>
-<button id=o aria-label=Menu>≡</button>
+<button id=o aria-label=메뉴>≡</button>
 <pre id=i></pre>
 <script>
 /*SCRIPT*/
