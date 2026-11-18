@@ -17,7 +17,7 @@ if (dev) FILES.push('dev.js');
 let js = FILES.map((f) => readFileSync(path.join(here, 'src', f), 'utf8')).join('\n');
 const tpl = readFileSync(path.join(here, 'template.html'), 'utf8');
 // everything runs inside one async function; startup errors are shown on screen
-const wrap = (body) => `(async()=>{${body}\n})().catch(e=>{console.error(e);document.body.className='l e';document.getElementById('s').textContent=(e.cause?'':'시작하지 못했습니다: ')+e.message});`;
+const wrap = (body) => `(async()=>{${body}\n})().catch(e=>{console.error(e);document.body.className='l e';if(e.cause){document.getElementById('s').textContent=e.message;}else{document.getElementById('s').textContent='시작하지 못했습니다. 페이지를 새로고침하거나 최신 Chrome 또는 Edge에서 다시 시도해 주세요.';const w=document.getElementById('w');w.hidden=false;w.textContent='기술 정보: '+(e&&e.message||e);}});`;
 
 let html;
 if (readable) {
